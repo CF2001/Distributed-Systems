@@ -1,0 +1,10 @@
+
+
+Fazer inicialmente (para ficar sempre assim): 
+     /target -> tem o genclass.jar (jar xf genclass.jar)
+
+     SD/assigment1:
+          javac -cp ../genclass.jar -d target -sourcepath . main/HeistToTheMuseum.java entities/*.java sharedRegions/*.java
+ 
+     SD/assigment1/target java main.HeistToTheMuseum
+
