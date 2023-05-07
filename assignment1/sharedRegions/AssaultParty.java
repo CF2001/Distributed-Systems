@@ -42,11 +42,6 @@ public class AssaultParty
     private int goingToCrawlOut;
 
     /**
-     *  True if the assault group has already been created.
-     */
-    private Boolean assaultParty_Created;
-
-    /**
      *  Assault Party id.
      */
     private int assaultParty_ID;
@@ -55,11 +50,6 @@ public class AssaultParty
      *  Id of the room assigned to the Assault Party.
      */
     private int assaultP_roomID; 
-
-    /**
-     *  True if the assault party is in operation.
-     */
-    private Boolean assaultP_inAction;
 
     /**
      *  Number of thieves that reached the room 
@@ -96,10 +86,8 @@ public class AssaultParty
         crawlingThieves = new ArrayList<>(SimulPar.K);
 
         
-        this.assaultParty_Created = false;
         this.assaultParty_ID = assaultParty_ID;
         this.assaultP_roomID = -1;
-        this.assaultP_inAction = false;
 
         this.moveCrawlOut = false;
         this.crawlingOutReady = 0;
@@ -153,24 +141,6 @@ public class AssaultParty
         this.assaultP_roomID = assaultP_roomID;
     }
 
-    // /**
-    //  *  Get state of the assault party.
-    //  * 
-    //  * @return  True if in action 
-    //  */
-    // public Boolean getAssaultP_inAction()
-    // {
-    //     return assaultP_inAction;
-    // }
-
-    // /**
-    //  *  Set state of the assault party.    
-    //  *  @param assaultP_inAction    
-    //  */
-    // public void setAssaultP_inAction(Boolean assaultP_inAction)
-    // {
-    //     this.assaultP_inAction = assaultP_inAction;
-    // }
 
     /**
      *  Array list of the assault party
@@ -181,24 +151,6 @@ public class AssaultParty
         return assaultP_Thieves; 
     }
 
-    // /**
-    //  *  Check if the assault party is created.
-    //  * 
-    //  * @return  True if assault party is created 
-    //  */
-    // public Boolean getAParty_Created() 
-    // {
-    //     return assaultParty_Created;
-    // }
-
-    // /**
-    //  * 
-    //  * @param assaultParty_Created
-    //  */
-    // public void setAParty_Created(Boolean assaultParty_Created) 
-    // {
-    //     this.assaultParty_Created = assaultParty_Created;  
-    // }
 
     /**
      *  Indicates whether the first member of the party has been notified by the master 
@@ -221,13 +173,10 @@ public class AssaultParty
 
         assaultP_roomID = roomID;
         //assaultParty_Created = true;
-        //assaultP_inAction = true;
     }
 
     public synchronized void resetAssaultParty()
     {
-        //assaultParty_Created = false;
-        //assaultP_inAction = false;
         assaultP_roomID = -1;
 
         for (int i = 0; i < SimulPar.K; i++)

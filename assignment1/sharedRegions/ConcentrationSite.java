@@ -228,11 +228,6 @@ public class ConcentrationSite
         ordinaryThief.setOTState(OrdinaryThiefStates.CONCENTRATION_SITE);
         int thiefID = ordinaryThief.getThiefID();
 
-        // try {
-        //     Thread.sleep(100);
-        // } catch (InterruptedException e) {
-        // } 
-
         // update general repository    -- info state Ordinary Thief 
         repos.setOTState(thiefID, ordinaryThief.getOTState());
 
@@ -422,15 +417,7 @@ public class ConcentrationSite
     public synchronized void setAssignedRoomID(int assaultPartyID, int roomID)
     {
         assignedRoomID[assaultPartyID] = roomID;
-
-        // for (int i = 0; i < SimulPar.NUM_ASSAULT_PARTIES; i++)
-        // {
-        //     System.out.print(assignedRoomID[i] + " ");
-        // }
-        // System.out.print(" \n");
     }
-
-
 
     /**
      *  Function that checks if assault parties have already been created. 
@@ -449,19 +436,7 @@ public class ConcentrationSite
                 assignedAP[i] = true;
                 break;
             }
-            // if (assaultParties[i].getAParty_Created() == false)
-            // {
-            //     idParty = assaultParties[i].getAssaultParty_ID();
-            //     break;
-            // }
         }
-
-        // for (int i = 0; i < SimulPar.NUM_ASSAULT_PARTIES; i++)
-        // {
-        //     System.out.print(assignedAP[i] + " ");
-        // }
-        // System.out.print(" \n");
-
         return idParty;
     }
 
@@ -481,11 +456,6 @@ public class ConcentrationSite
                 roomID = i;
                 break;
             }
-            // if ((roomStates.get(i)) != false && (assaultParties[0].getAssaultP_roomID()!= i) && (assaultParties[1].getAssaultP_roomID()!= i) )
-            // {
-            //     roomID = i;
-            //     break;
-            // }
         }
         return roomID;
     }
@@ -506,17 +476,6 @@ public class ConcentrationSite
                 return assignedAPid_Thieves[ordinaryThief.getThiefID()];
             }
         }
-
-        // for (int i = 0; i < SimulPar.NUM_ASSAULT_PARTIES; i++)
-        // {
-        //     for (int j = 0; j < SimulPar.K; j++)
-        //     {
-        //         if (assaultParties[i].getAssaultP_Thieves().get(j) == ordinaryThief.getThiefID())
-        //         {
-        //             return i;
-        //         }
-        //     }            
-        // }
         return -1;
     }
 
@@ -529,10 +488,6 @@ public class ConcentrationSite
     {
         for (int i = 0; i < SimulPar.NUM_ASSAULT_PARTIES; i++)
         {
-            // if(assaultParties[i].getAssaultP_inAction() == true)
-            // {
-            //     return true;
-            // }
             if (assignedAP[i] == true)
             {
                 return true;
@@ -568,10 +523,6 @@ public class ConcentrationSite
                 {
                     return true; 
                 }
-                // if (assaultParties[i].getAssaultP_roomID() == indexRoom)
-                // {
-                //     return true;
-                // }
             }
         }
         return false;
