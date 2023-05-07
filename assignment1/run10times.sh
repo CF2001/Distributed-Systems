@@ -1,7 +1,16 @@
 #!/bin/bash
 
+echo "Compiling source code."
+javac -cp ../genclass.jar -d target -sourcepath . main/HeistToTheMuseum.java entities/*.java sharedRegions/*.java
+
+echo "Extract library"
+cp ../genclass.jar ./target
+
+echo -e "Executing source code\n"
+cd target ; jar xf genclass.jar
+
 # set the number of iterations
-num_iterations=100
+num_iterations=10
 
 # set the timeout for each iteration in seconds
 timeout=20s
