@@ -1,0 +1,58 @@
+
+
+Ports:
+     group 6 => y
+     class 4 => x
+
+     first port: 22000 + 100 * x + 10 * (y - 1) = 22000 + 100 * 4 + 10 * (6-1) = 22450
+
+     22450 - 22459
+                     
+Node name: l040101-ws01.ua.pt up to l040101-ws10.ua.pt (4 e 10 ainda n funcionam)
+
+login: sd406
+
+password: qwerty
+
+Connect to node: ssh sd406@l040101-ws&&.ua.pt
+
+----------------------------- ,, -----------------------------
+
+ServerHeistMuseumGeneralRepos --> l040101-ws01.ua.pt ; 22450  
+
+ServerHeistMuseumConcSite     --> l040101-ws02.ua.pt ; 22451
+
+ServerHeistMuseumControlSite  --> l040101-ws03.ua.pt ; 22452
+
+ServerHeistMuseumMuseum       --> l040101-ws05.ua.pt ; 22453
+
+ServerHeistMuseumAssaultP0    --> l040101-ws06.ua.pt ; 22454
+
+ServerHeistMuseumAssaultP1    --> l040101-ws07.ua.pt ; 22455
+
+Master Thief -> l040101-ws08.ua.pt
+
+Ordinary Thief -> l040101-ws09.ua.pt
+
+RMI register service ->  l040101-ws10.ua.pt ; 22456
+
+ServerRegisterRemoteObject -> 22457
+
+---------------------------- ,, -----------------------------
+
+lsof -i -P -n | grep LISTEN
+kill $(lsof -t -i:port)
+qwerty
+
+---------------------------- ,, -----------------------------
+
+script permissions : chmod a+rx
+
+---------------------------- ,, ----------------------------
+
+snx -s go.ua.pt -u a.claudia@ua.pt
+
+
+
+               
+
