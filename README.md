@@ -14,11 +14,12 @@ Distributed implementation of the problem, based on message passing, running in 
 
 Distributed implementation of the problem, based on method invocation on remote objects, running in multiple platforms.
 
-#### Grades:
-Assignment 1 - 16/16 <br>
-Assignment 2 - 16/16 <br>
-Assignment 3 - 
-
 <br>
 
 Projects developed with [Edgar Sousa](https://github.com/EdgarSouSousa).
+
+
+#### Grades:
+Assignment 1 - 16/16 <br>
+Assignment 2 - 16/16 <br>
+Assignment 3 - 16/16
